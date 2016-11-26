@@ -8,7 +8,7 @@ import foundation from 'style!css!foundation-sites/dist/foundation.min.css';
 $(document).foundation();
 
 // CSS
-import css from 'style!css!sass!../style/style.scss';
+import css from 'style!css!sass!../styles/style.scss';
 
 ReactDOM.render(
   <Router history={browserHistory}>
