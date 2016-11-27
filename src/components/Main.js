@@ -1,5 +1,6 @@
 import React from 'react';
 import Nav from './Nav';
+import Stopwatch from './Stopwatch';
 
 export default (props) => {
   return (
@@ -7,6 +8,7 @@ export default (props) => {
       <div>
         <div>
           <Nav />
+          <p>Rendered Main.js</p>
           {props.children}
         </div>
       </div>

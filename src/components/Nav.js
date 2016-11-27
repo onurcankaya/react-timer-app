@@ -10,10 +10,10 @@ export default () => {
               React Timer App
             </li>
             <li>
-              <IndexLink to='/' activeClassName='active-link' activeStyle={{ fontWeight: 'bold' }}>Timer</IndexLink>
+              <IndexLink to='/' activeClassName='active-link'>Stopwatch</IndexLink>
             </li>
             <li>
-              <Link to='/' activeClassName='active-link' activeStyle={{ fontWeight: 'bold' }}>Stopwatch</Link>
+              <Link to='timer' activeClassName='active-link'>Timer</Link>
             </li>
           </ul>
         </div>
