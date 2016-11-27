@@ -31,6 +31,10 @@ module.exports = {
     }]
   },
   resolve: {
+    root: __dirname,
+    alias: {
+      Clock: 'src/components/Clock.js'
+    },
     extensions: ['', '.js', '.jsx']
   },
   devServer: {
