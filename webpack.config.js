@@ -34,7 +34,8 @@ module.exports = {
     root: __dirname,
     alias: {
       Clock: 'src/components/Clock.js',
-      TimerForm: 'src/components/TimerForm.js'
+      TimerForm: 'src/components/TimerForm.js',
+      Timer: 'src/components/Timer.js'
     },
     extensions: ['', '.js', '.jsx']
   },
