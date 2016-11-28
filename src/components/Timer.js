@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Clock from 'Clock';
-import TimerForm from './TimerForm';
+import TimerForm from 'TimerForm';
+import Controls from 'Controls';
 
 export default class Timer extends Component {
   constructor(props) {
@@ -17,6 +18,14 @@ export default class Timer extends Component {
       switch (this.state.timerStatus) {
         case 'started':
           this.startTimer();
+          break;
+        case 'stopped':
+          this.setState({
+            count: 0
+          });
+        case 'paused':
+          clearInterval(this.timer);
+          this.timer = null;
           break;
       }
     }
@@ -38,13 +47,26 @@ export default class Timer extends Component {
     });
   }
 
+  handleStatusChange(newStatus) {
+    this.setState({
+      timerStatus: newStatus
+    });
+  }
+
   render() {
-    let {count} = this.state;
+    let {count, timerStatus} = this.state;
+    let renderControlArea = () => {
+      if (timerStatus !== 'stopped') {
+        return <Controls timerStatus={timerStatus} onStatusChange={this.handleStatusChange.bind(this)} />
+      } else {
+        return <TimerForm onSetTimer={this.handleSetTimer.bind(this)} />
+      }
+    };
 
     return (
       <div>
         <Clock totalSeconds={count} />
-        <TimerForm onSetTimer={this.handleSetTimer.bind(this)} />
+        {renderControlArea()}
       </div>
     );
   }
