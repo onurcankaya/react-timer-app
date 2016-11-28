@@ -1,11 +1,11 @@
 import React, { Component, PropTypes } from 'react';
 
 export default class Clock extends Component {
-  static get defaultProps() {
-    totalSeconds: 0
-  }
+  static defaultProps = {
+    totalSeconds: 0,
+  };
 
-  propTypes = {
+  static propTypes = {
     totalSeconds: PropTypes.number
   };
 

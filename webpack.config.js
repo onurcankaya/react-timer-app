@@ -33,7 +33,8 @@ module.exports = {
   resolve: {
     root: __dirname,
     alias: {
-      Clock: 'src/components/Clock.js'
+      Clock: 'src/components/Clock.js',
+      TimerForm: 'src/components/TimerForm.js'
     },
     extensions: ['', '.js', '.jsx']
   },

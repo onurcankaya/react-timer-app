@@ -5,10 +5,9 @@ import Stopwatch from './Stopwatch';
 export default (props) => {
   return (
     <div>
-      <div>
-        <div>
-          <Nav />
-          <p>Rendered Main.js</p>
+      <Nav />
+      <div className="row">
+        <div className="column small-centered medium-6 large-4">
           {props.children}
         </div>
       </div>
