@@ -17,9 +17,9 @@ export default class Controls extends Component {
     let renderStartStopButton = () => {
       if (timerStatus === 'started') {
         return <button className="button secondary" onClick={this.onStatusChange('paused')}>Pause</button>;
-      } else if (timerStatus === 'paused') {
+      } else {
         return <button className="button primary" onClick={this.onStatusChange('started')}>Start</button>;
-      }
+      }    
     };
 
     return (
