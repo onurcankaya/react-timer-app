@@ -76,6 +76,7 @@ export default class Timer extends Component {
 
     return (
       <div>
+        <h1 className="page-title">Timer</h1>
         <Clock totalSeconds={count} />
         {renderControlArea()}
       </div>
