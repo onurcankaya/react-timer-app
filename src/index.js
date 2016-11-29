@@ -6,11 +6,10 @@ import Stopwatch from './components/Stopwatch';
 import Timer from './components/Timer';
 
 // Load foundation
-import foundation from 'style!css!foundation-sites/dist/foundation.min.css';
 $(document).foundation();
 
 // CSS
-import css from 'style!css!sass!../styles/style.scss';
+import css from 'style!css!sass!../styles/index.scss';
 
 ReactDOM.render(
   <Router history={browserHistory}>
